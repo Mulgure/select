@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#ip1{
+		width: 100px;
+		outline:none;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+
+	#content{
+		display: none;			
+		width: 100px;
+
+	}
+
+	.subContent{
+		text-align: center;
+	}
+
+	.subContent:hover{
+		background: #7286F0;
+	}
+</style>
+<body>
+	<input type="text" id="ip1" onInput="myFunction()" onFocus="myFunction2()"onBlur="myFunction3()">  	<!--oninput实时刷新value值-->
+	<div id="content">										<!--选择框-->
+		<div class="subContent">aa</div>
+		<div class="subContent">aab</div>
+		<div class="subContent">bb</div>
+		<div class="subContent">cc</div>
+		<div class="subContent">dd</div>
+		<div class="subContent">ee</div>
+		<div class="subContent">ff</div>
+	</div>
+
+
+	<script>
+    content=document.getElementById('content')
+
+	for(i=0;i<7;i++){
+		 document.getElementsByClassName('subContent')[i].onclick=function(){
+			document.getElementById('ip1').value = this.innerHTML;
+		}
+	}
+	function myFunction(){		
+		for(j=0;j<7;j++){								
+			document.getElementsByClassName('subContent')[j].style.display="none";		//重置
+		}
+
+		for(i=0;i<7;i++){
+			if(document.getElementsByClassName('subContent')[i].innerHTML.indexOf(document.getElementById('ip1').value)===0){
+
+				document.getElementsByClassName('subContent')[i].style.display="block";   //前缀匹配输入	
+			} 
+		}	
+	}
+
+	function myFunction2(){							//获取焦点后列表全显示
+		content.style.display="block";
+	}	
+	
+	function myFunction3(){							//失去焦点后列表消失 要兼顾点击事件，所以用定时器
+		setTimeout('content.style.display="none"',100)
+	}
+
+
+	</script>
+</body>
+</html>
