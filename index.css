@@ -1,0 +1,20 @@
+	#ip1{
+		width: 100px;
+		outline:none;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+
+	#content{
+		display: none;			
+		width: 100px;
+
+	}
+
+	.newOption{
+		text-align: center;
+	}
+
+	.newOption:hover{
+		background: #7286F0;
+	}
