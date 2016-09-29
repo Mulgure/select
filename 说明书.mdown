@@ -1,0 +1,19 @@
+功能：对字母的前缀匹配
+
+
+
+
+调用方式
+
+1. 引入index.css和index.js
+
+2. 在body中写入
+
+<input type="text" id="ip1">
+
+<div id="content">
+
+	<div class="newOption">option内容</div>  (多个)
+
+</div>	
+
