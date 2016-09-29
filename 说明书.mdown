@@ -9,11 +9,11 @@
 
 2. 在body中写入
 
-<input type="text" id="ip1">
+\<input type="text" id="ip1"\>
 
-<div id="content">
+\<div id="content"\>
 
-	<div class="newOption">option内容</div>  (多个)
+	\<div class="newOption">option内容\</div\>  (多个)
 
-</div>	
+\</div\>	
 
