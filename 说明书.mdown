@@ -13,7 +13,7 @@
 
 \<div id="content"\>
 
-	<div class="newOption">option内容\</div>  (多个)
+	<div class="newOption">option内容</div>  (多个)
 
 \</div\>	
 
